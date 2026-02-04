@@ -1,16 +1,16 @@
-"use client";
-import Image from "next/image";
-import logo from "@/public/images/your-logo-white.webp";
-import styles from "./Navbar.module.css";
-import { useState, useEffect } from "react";
+// "use client";
+// import Image from "next/image";
+// import logo from "@/public/images/your-logo-white.webp";
+// import styles from "./Navbar.module.css";
+// import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
   return (
     // <nav className="fixed w-full overflow-hidden bg-honolulu-blue">
-    <nav className="fixed w-full overflow-hidden z-2 shadow-2xl">
+    <nav className="fixed w-full bg-white md:bg-transparent overflow-hidden z-2 shadow-2xl">
       <div className="flex justify-between items-center w-[95%] h-20 m-auto">
         {/* <a href={"/"}>
           <Image
@@ -21,30 +21,35 @@ const Navbar = () => {
             className="h-full"
           />
         </a> */}
-        <div className="logo flex items-center w-64 h-16">
-          <div className="rectangle absolute w-26 h-12 border-t border-b border-l border-white">
-            <div className="line rectangle-sm h-4 border-r border-white"></div>
+        <div className="logo flex items-center w-57 h-16">
+          <div className="rectangle absolute w-24 h-12 border-t border-b border-l border-black md:border-white">
+            <div className="line rectangle-sm h-4 border-r border-black md:border-white"></div>
             <div className="rectangle-sm h-4"></div>
-            <div className="line rectangle-sm h-3.5 border-r border-white"></div>
+            <div className="line rectangle-sm h-4 border-r border-black md:border-white"></div>
           </div>
-          <div className="logo-text z-1 w-51 m-auto opacity-100 font-bold text-honolulu-blue">
-            <span className="text-white">Lakeshore</span> Web Services
+          {/* <div className="logo-text z-1 w-51 m-auto opacity-100 font-bold text-honolulu-blue"> */}
+          <div className="logo-text m-auto font-bold text-honolulu-blue">
+            <span className="text-black md:text-white">Lakeshore</span> Web
+            Services
           </div>
         </div>
 
         {/* Hamburger */}
         <div
-          onClick={() => setIsActive(!isActive)}
-          className={`my-auto mx-0 cursor-pointer md:hidden`}
+          // onClick={() => setIsActive(!isActive)}
+          className={`hamburger my-auto mx-0 cursor-pointer md:hidden`}
         >
           <span
-            className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            // className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            className={`bar block w-8 h-1 m-1.5 bg-black`}
           ></span>
           <span
-            className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            // className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            className={`bar block w-8 h-1 m-1.5 bg-black`}
           ></span>
           <span
-            className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            // className={`block w-8 h-1 m-1.5 bg-black ${isActive && styles.bar}`}
+            className={`bar block w-8 h-1 m-1.5 bg-black `}
           ></span>
         </div>
         {/* Desktop Menu */}
@@ -77,9 +82,10 @@ const Navbar = () => {
         </ul>
         {/* Mobile/Tablet Menu */}
         <ul
-          className={`fixed top-20 ${
-            isActive ? "right-0 w-[50%] bg-white" : "hidden"
-          }`}
+          // className={`fixed top-20 ${
+          //   isActive ? "right-0 w-[50%] bg-white" : "hidden"
+          // }`}
+          className="mobile"
         >
           <li className="py-4 px-2 text-center">
             <Link href={"/"}>Home</Link>

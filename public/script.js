@@ -1,11 +1,11 @@
-// // ********** Navigation **********
-// const hamburger = document.querySelector('.hamburger')
-// const navMenu = document.querySelector('ul')
+// ********** Navigation **********
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".mobile");
 
-// hamburger.addEventListener('click', function() {
-//     navMenu.classList.toggle('active')
-//     hamburger.classList.toggle('active')
-// })
+hamburger.addEventListener("click", function () {
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
 
 window.onscroll = function () {
   scrollFunction();
@@ -13,8 +13,8 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
   ) {
     document.querySelector("nav").classList.add("scrolled");
   } else {

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import logo from "@/public/images/your-logo-black.webp";
+// import logo from "@/public/images/your-logo-black.webp";
 
 const Footer = () => {
   return (
     <footer className="h-20 bg-gray-100">
       <div className="flex justify-between w-[95%] h-full m-auto">
-        <a className="my-auto" href="index.html">
+        {/* <a className="my-auto" href="index.html">
           <Image
             className="light"
             src={logo}
@@ -14,7 +14,7 @@ const Footer = () => {
             height={45}
             unoptimized
           />
-        </a>
+        </a> */}
         <p className="m-auto">&copy; 2026</p>
         <div className="flex my-auto">
           <a target="_blank" href="https://www.facebook.com/" className="p-2">

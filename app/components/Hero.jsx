@@ -1,14 +1,20 @@
 import Link from "next/link";
-import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      // className="flex h-[70vh] pt-20 bg-cover"
-      className="flex relative h-[85vh] bg-[url('/images/sleeping_bear.webp')] bg-cover"
-      // className="flex h-[70vh] pt-20 bg-[url(https://placehold.co/768x512)] bg-cover"
-    >
+    <section id="hero" className="flex relative h-[85vh]">
+      {/* LCP IMAGE */}
+      <Image
+        src="/images/sleeping_bear.webp"
+        alt="Sleeping Bear Dunes"
+        fill
+        priority
+        quality={[25, 60, 75]}
+        // quality={60}
+        fetchPriority="high"
+        className="object-cover"
+      />
       <div className="background absolute w-full h-full bg-black opacity-70"></div>
       <div className="w-[95%] m-auto text-center z-1">
         <div className="text-wrapper w-175 m-auto">
